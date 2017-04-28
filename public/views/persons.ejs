@@ -1,0 +1,15 @@
+<h1>訪客資訊</h1>
+<% if (userinfos.length) { %>
+  <ul>
+    <% userinfos.forEach(function(userinfo){ %>
+      <li>
+        <div class='name'>
+          <%= userinfo['firstname'] %> <%= userinfo['adress'] %>
+        </div>
+        <a href="" class='read' rel=<%= userinfo['_id']%>>詳細</a>
+        <a href="" class='delete' rel=<%= userinfo['_id']%>>刪除</a>
+        <a href="" class='update' rel=<%= userinfo['_id']%>>編輯</a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
